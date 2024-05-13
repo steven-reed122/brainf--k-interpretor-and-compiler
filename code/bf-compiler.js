@@ -85,15 +85,44 @@ int main() {
   output += suffix;
 
   console.log(output);
+  fs.writeFileSync('./C++_code.txt', output, 'utf8');  // Write the output to a file named C++_code.cpp
   return output;
 }
 
-var bf_code1 = `Fibonacci triangle on 80 column display code
-// ++++++++[>+>++++<<-]>++>>+<[-[>>+<<-]+>>]>+[
-//     -<<<[
-//         ->[+[-]+>++>>>-<<]<[<]>>++++++[<<+++++>>-]+<<++.[-]<<
-//     ]>.>+[>>]>+
-// ] `;
+var bf_code1 = `
+// This program prints Sierpinski triangle on 80-column display
+//                                >    
+//                               + +    
+//                              +   +    
+//                             [ < + +    
+//                            +       +    
+//                           + +     + +    
+//                          >   -   ]   >    
+//                         + + + + + + + +    
+//                        [               >    
+//                       + +             + +    
+//                      <   -           ]   >    
+//                     > + + >         > > + >    
+//                    >       >       +       <    
+//                   < <     < <     < <     < <    
+//                  <   [   -   [   -   >   +   <    
+//                 ] > [ - < + > > > . < < ] > > >    
+//                [                               [    
+//               - >                             + +    
+//              +   +                           +   +    
+//             + + [ >                         + + + +    
+//            <       -                       ]       >    
+//           . <     < [                     - >     + <    
+//          ]   +   >   [                   -   >   +   +    
+//         + + + + + + + +                 < < + > ] > . [    
+//        -               ]               >               ]    
+//       ] +             < <             < [             - [    
+//      -   >           +   <           ]   +           >   [    
+//     - < + >         > > - [         - > + <         ] + + >    
+//    [       -       <       -       >       ]       <       <    
+//   < ]     < <     < <     ] +     + +     + +     + +     + +    
+//  +   .   +   +   +   .   [   -   ]   <   ]   +   +   +   +   +    
+// * * * * * M a d e * B y : * N Y Y R I K K I * 2 0 0 2 * * * * *    `;
 
 var mandalbrat_bf_code  = `
 // Mandelbrot fractal:
@@ -242,4 +271,29 @@ var mandalbrat_bf_code  = `
 // +[-[->>>>>>>>>+<<<<<<<<<]>>>>>>>>>]>>>>>->>>>>>>>>>>>>>>>>>>>>>>>>>>-<<<<<<[<<<<
 // <<<<<]]>>>]`;
 
-bf_compiler(mandalbrat_bf_code);
+var hello_world_bf_code = `
+//Hello World! long version:
+//
+// +++++ +++++             initialize counter (cell #0) to 10
+// [                       set the next four cells to 70 100 30 and 10
+//     > +++++ ++          add  7 to cell #1
+//     > +++++ +++++       add 10 to cell #2
+//     > +++               add  3 to cell #3
+//     > +                 add  1 to cell #4
+//     <<<< -              decrement counter (cell #0)
+// ]
+// > ++ .                  print 'H'  (H = ASC (72))
+// > + .                   print 'e'  (e = ASC (101))
+// +++++ ++ .              print 'l'
+// .                       print 'l'
+// +++ .                   print 'o'
+// > ++ .                  print ' '
+// << +++++ +++++ +++++ .  print 'W'
+// > .                     print 'o'
+// +++ .                   print 'r'
+// ----- - .               print 'l'
+// ----- --- .             print 'd'
+// > + .                   print '!'
+// > .                     print '\n'`;
+
+bf_compiler(hello_world_bf_code);

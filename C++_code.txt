@@ -1,0 +1,141 @@
+
+#include <iostream>
+#include <vector>
+  
+int const data_size = 10000;
+
+void bf_execution()
+{
+    std::vector<char> data(data_size, 0);
+    auto data_ptr = data.begin();
+    ++*data_ptr;
+    ++*data_ptr;
+    ++*data_ptr;
+    ++*data_ptr;
+    ++*data_ptr;
+    ++*data_ptr;
+    ++*data_ptr;
+    ++*data_ptr;
+    ++*data_ptr;
+    ++*data_ptr;
+    while (*data_ptr) {
+        ++data_ptr;
+        ++*data_ptr;
+        ++*data_ptr;
+        ++*data_ptr;
+        ++*data_ptr;
+        ++*data_ptr;
+        ++*data_ptr;
+        ++*data_ptr;
+        ++data_ptr;
+        ++*data_ptr;
+        ++*data_ptr;
+        ++*data_ptr;
+        ++*data_ptr;
+        ++*data_ptr;
+        ++*data_ptr;
+        ++*data_ptr;
+        ++*data_ptr;
+        ++*data_ptr;
+        ++*data_ptr;
+        ++data_ptr;
+        ++*data_ptr;
+        ++*data_ptr;
+        ++*data_ptr;
+        ++data_ptr;
+        ++*data_ptr;
+        --data_ptr;
+        --data_ptr;
+        --data_ptr;
+        --data_ptr;
+        --*data_ptr;
+    }
+    ++data_ptr;
+    ++*data_ptr;
+    ++*data_ptr;
+    std::putchar(*data_ptr);
+    ++data_ptr;
+    ++*data_ptr;
+    std::putchar(*data_ptr);
+    ++*data_ptr;
+    ++*data_ptr;
+    ++*data_ptr;
+    ++*data_ptr;
+    ++*data_ptr;
+    ++*data_ptr;
+    ++*data_ptr;
+    std::putchar(*data_ptr);
+    std::putchar(*data_ptr);
+    ++*data_ptr;
+    ++*data_ptr;
+    ++*data_ptr;
+    std::putchar(*data_ptr);
+    ++data_ptr;
+    ++*data_ptr;
+    ++*data_ptr;
+    std::putchar(*data_ptr);
+    --data_ptr;
+    --data_ptr;
+    ++*data_ptr;
+    ++*data_ptr;
+    ++*data_ptr;
+    ++*data_ptr;
+    ++*data_ptr;
+    ++*data_ptr;
+    ++*data_ptr;
+    ++*data_ptr;
+    ++*data_ptr;
+    ++*data_ptr;
+    ++*data_ptr;
+    ++*data_ptr;
+    ++*data_ptr;
+    ++*data_ptr;
+    ++*data_ptr;
+    std::putchar(*data_ptr);
+    ++data_ptr;
+    std::putchar(*data_ptr);
+    ++*data_ptr;
+    ++*data_ptr;
+    ++*data_ptr;
+    std::putchar(*data_ptr);
+    --*data_ptr;
+    --*data_ptr;
+    --*data_ptr;
+    --*data_ptr;
+    --*data_ptr;
+    --*data_ptr;
+    std::putchar(*data_ptr);
+    --*data_ptr;
+    --*data_ptr;
+    --*data_ptr;
+    --*data_ptr;
+    --*data_ptr;
+    --*data_ptr;
+    --*data_ptr;
+    --*data_ptr;
+    std::putchar(*data_ptr);
+    ++data_ptr;
+    ++*data_ptr;
+    std::putchar(*data_ptr);
+    ++data_ptr;
+    std::putchar(*data_ptr);
+
+}
+
+int main() {
+  try
+  {
+    bf_execution();
+    return 0;
+  }
+  catch (std::exception& e)
+  {
+    std::cerr << "exception: " << e.what() << '\n';
+    return 1;
+  }
+  catch (...)
+  {
+    std::cerr << "Some exception\n";
+    return 2;
+  }
+}
