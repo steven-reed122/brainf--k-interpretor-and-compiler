@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BF Website</title>
+  </head>
+  <body>
+    <h1>Brainf*** language interpreter/compiler Website</h1>
+    <p>Welcome to the BF website. 
+      This is a simple website that I created to learn HTML, CSS and JavaScript. 
+      I hope you enjoy it! </p>
+    <p>
+      Type in your bf code below and click the "Run" button to see the output.
+    </p>
+    <p>
+      Some example bf code can be found <a href="bf-examples.html">here</a>.
+    </p>
+    <textarea class = "bf-code-textarea" id="bf-code" rows="10" cols="50"></textarea>
+    <button class = "run-button">Run! &#9658;</button>
+    <p>Output:</p>
+    <textarea class = "bf-interpreter-output" id = "interpreted-bf-code-output" rows ="10" cols="50"></textarea>
+    <textarea class = "bf-compiler-output" id = "compiled-bf-code-output" rows ="10" cols="50"></textarea>
+    <textarea class = "bf-optimized-compiler-output" id = "optimized-compiled-bf-code-output" rows ="10" cols="50"></textarea>
+    <script src="bf-interpreter.js"></script>
+    <script src="bf-compiler.js"></script>
+    <script src="bf-optimized-compiler.js"></script>
+  </body>
+</html>
