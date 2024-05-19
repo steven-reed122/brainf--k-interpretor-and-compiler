@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>BF Website</title>
-  </head>
-  <body>
-    <h1>Brainf*** language interpreter/compiler Website</h1>
-    <p>Welcome to the BF website. 
-      This is a simple website that I created to learn HTML, CSS and JavaScript. 
-      I hope you enjoy it! </p>
-    <p>
-      Type in your bf code below and click the "Run" button to see the output.
-    </p>
-    <p>
-      Some example bf code can be found <a href="bf-examples.html">here</a>.
-    </p>
-    <textarea class = "bf-code-textarea" id="bf-code" rows="10" cols="50"></textarea>
-    <button class = "run-button">Run! &#9658;</button>
-    <p>Output:</p>
-    <textarea class = "bf-interpreter-output" id = "interpreted-bf-code-output" rows ="10" cols="50"></textarea>
-    <textarea class = "bf-compiler-output" id = "compiled-bf-code-output" rows ="10" cols="50"></textarea>
-    <textarea class = "bf-optimized-compiler-output" id = "optimized-compiled-bf-code-output" rows ="10" cols="50"></textarea>
-    <script src="bf-interpreter.js"></script>
-    <script src="bf-compiler.js"></script>
-    <script src="bf-optimized-compiler.js"></script>
-  </body>
+    <script src="../code/bf-interpreter.js"></script>
+    <script src="../code/bf-compiler.js"></script>
+    <script src="../code/bf-optimized-compiler.js"></script>
+</head>
+<body>
+    <h1>Brainf*** Language Interpreter/Compiler Website</h1>
+    <p>Welcome to the BF website. This is a simple website that I created to learn HTML, CSS, and JavaScript. I hope you enjoy it!</p>
+    <p>Type in your bf code below and click the "Run" button to see the output.</p>
+    <p>Some example bf code can be found <a href="bf-examples.html">here</a>.</p>
+    <textarea class="bf-code-textarea" id="bf-code" rows="10" cols="50"></textarea>
+    <button class="run-button" onclick="run_bf_interpreter(), run_bf_compiler(),run_bf_optimized_compiler()">Run! &#9658;</button>
+    <div class="output-text-boxes">
+        <p>Output:</p>
+        <p>Interpreter Output</p>
+        <textarea class="bf-interpreter-output" id="interpreted-bf-code-output" rows="10" cols="50"></textarea>
+        <p>Compiler Output</p>
+        <textarea class="bf-compiler-output" id="compiled-bf-code-output" rows="10" cols="50"></textarea>
+        <p>Optimized Compiler Output</p>
+        <textarea class="bf-optimized-compiler-output" id="optimized-compiled-bf-code-output" rows="10" cols="50"></textarea>
+    </div>
+</body>
 </html>
