@@ -3,7 +3,9 @@
 //output to the terminal and the corresponding HTML box that I will
 //make later.
 
-function bf_interpreter(bf_code) {
+//Current bugs: need to implement input with comma
+
+function bf_interpreter(bf_code, output_textarea) {
   var data_size = 65535;
   var data_array = new Uint8Array(data_size).fill(0);
   var data_ptr = 0;
@@ -26,7 +28,7 @@ function bf_interpreter(bf_code) {
               data_array[data_ptr] -= 1;
               break;
           case '.':
-              output += String.fromCharCode(data_array[data_ptr]);
+                output += String.fromCharCode(data_array[data_ptr]);
               break;
           case ',':
               data_array[data_ptr] = input.charCodeAt(0);
@@ -61,7 +63,6 @@ function run_bf_interpreter() {
   const bf_code_textarea = document.getElementById("bf-code");
   const interpreted_bf_code_textarea = document.getElementById("interpreted-bf-code-output");
   const text = bf_code_textarea.value;
-  
   const output = bf_interpreter(text);
   interpreted_bf_code_textarea.value = output;
 }
@@ -79,6 +80,10 @@ class InlineLogger {
       console.log(this.buffer);
       this.buffer = '';
   }
+}
+
+function ends_with(str, suffix) {
+  return str.indexOf(suffix, str.length - suffix.length) !== -1;
 }
 
 // Example usage

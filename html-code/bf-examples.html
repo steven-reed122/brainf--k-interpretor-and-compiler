@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script>
+      const filePath = "../code/brainfuck_code.txt";
+      fetch(filePath)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+          }
+          return response.text();
+          })
+        .then(text => {
+          document.getElementById('fileContent').textContent = text;
+        })
+        .catch(error => {
+          console.error('There was a problem with fetching the text file:', error);
+          document.getElementById('fileContent').textContent = 'Failed to load content.';
+        });
+    </script>
     <title>BF Examples</title>
   </head>
   <body>
     <p>The following texts are some Brainfuck code examples.</p>
     <p>I take no credit for any of the following code snippets, these are just for example purposes.</p>
-    <p>
-      // Printing Hello World! <br>
-      // ++++++++++[>+++++++>++++++++++>+++>+<<<<-]<br>
-      // >++.>+.+++++++..+++.>++. <br>
-      // <<+++++++++++++++.>.+++.------.--------.>+.>. <br>
-    </p>
-
-    
+    <pre id="fileContent"></pre>
   </body>
 </html>
