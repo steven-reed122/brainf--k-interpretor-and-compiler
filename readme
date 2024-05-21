@@ -6,7 +6,8 @@ executes them.
 It will disregard all characters in the code that are not part 
 of the brainfuck language.
 
-To run this program, run the bf-website.html file using google chrome.
+To run this program, download the code, open it in VSCode, 
+and run the bf-website.html file using google chrome.
 
 Brainfuck was created in 1993 by Urban Müller 
 as an experiment into how minimal a program language 
